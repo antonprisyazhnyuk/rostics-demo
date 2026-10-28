@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<title>Ростикс · игры</title>
+<style>
+  @font-face { font-family: "Cera Condensed"; font-weight: 900; font-display: swap; src: url(assets/fonts/CeraCondensedPro-Black.woff) format("woff"); }
+  @font-face { font-family: "Cera Pro"; font-weight: 400; font-display: swap; src: url(assets/fonts/CeraPro-Regular.woff) format("woff"); }
+  @font-face { font-family: "Cera Pro"; font-weight: 700; font-display: swap; src: url(assets/fonts/CeraPro-Bold.woff) format("woff"); }
+  /* цвета и кнопка-«таблетка» — как в самих играх (game/rostics-game.html) */
+  :root { --red: #ef2e30; --red-deep: #d6262a; --ink: #121212; --muted: #77716f; --chip: #f5f2ed; --paper: #fff; }
+  * { box-sizing: border-box; margin: 0; }
+  html, body { height: 100%; }
+  body { background: var(--paper); color: var(--ink); font: 400 16px/1.4 "Cera Pro", system-ui, sans-serif;
+         display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 32px; padding: 32px 16px; }
+  header { display: flex; flex-direction: column; align-items: center; gap: 16px; text-align: center; }
+  header img { width: 160px; height: auto; }
+  h1 { font: 900 44px/1 "Cera Condensed", sans-serif; text-transform: lowercase; }
+  .games { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; width: min(560px, 100%); }
+  .game { display: flex; flex-direction: column; gap: 12px; padding: 24px; border-radius: 24px; background: var(--chip); text-decoration: none; color: inherit; }
+  .game h2 { font: 900 32px/1 "Cera Condensed", sans-serif; text-transform: lowercase; }
+  .game p { color: var(--muted); flex: 1; }
+  .btn { display: flex; align-items: center; justify-content: center; height: 46px; border-radius: 23px; background: var(--red); color: #fff; font-weight: 700; }
+  .game:hover .btn { background: var(--red-deep); }
+</style></head><body>
+<header>
+  <img src="assets/rostics-logo.png" alt="Ростикс">
+  <h1>игры ростикс</h1>
+</header>
+<main class="games">
+  <a class="game" href="games/catch/"><h2>лови вкусное</h2><p>Лови еду ведёрком, обходи лишнее — спортивный коллаб.</p><span class="btn">Играть</span></a>
+  <a class="game" href="games/shift/"><h2>смена</h2><p>Свой Ростикс: собирай заказы, открывай кухню и зал.</p><span class="btn">Играть</span></a>
+</main>
+</body></html>
